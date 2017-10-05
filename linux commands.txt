@@ -1,0 +1,127 @@
+#!/bin/bash
+cnt=`grep processor /proc/cpuinfo | wc -l`
+if [ $cnt -lt 5 ] ;then
+echo "too few CPUs, exiting"
+fi
+
+
+#!/bin/bash
+
+# this is a CPU counting script
+
+cpu=grep -o 'processor' /proc/cpuinfo | wc -l
+if [ $cpu -lt 2 ]; then
+  echo "Value too small".
+exit 1
+fi
+
+
+git clone https://github.com/yyyura/epa-comp.git
+
+hello world
+privet mircat
+
+myfile.txtepa@localhostepa@localhostepa@localhost
+
+wk2
+#!/bin/bash
+a=879
+echo "The value of \"a\" is $a."
+
+if [ $val -gt 100 ]; then
+  echo "Value too large".
+fi
+
+
+--
+#!/bin/bash
+a=879
+echo "The value of \"a\" is $a."
+if [ $a -gt 100 ]; then
+  echo "Value too large".
+fi
+echo $USER $HOME
+echo $1 $2 $3 
+#positional parameters are the words following the name of a shell script
+#$ ./loop.sh one two three
+--
+
+wk1
+/proc/cpuinfo
+cat--  to read the contents of files
+grep-- command to search a file
+history
+!24
+Ctrl R --search last commands 
+tab complishion hit X 2 list of comands
+cat > myfile.txt
+hello world
+ctrl Za+x 
+cat >> myfile.txt
+
+terminal just select -copy, then hit roller -paste
+
+
+vim cpu_count.sh
+i --insert
+
+#!/bin/bash
+#grep -c 'processor' /proc/cpuinfo
+#cat /proc/cpuinfo
+grep -o 'processor' /proc/cpuinfo | wc -l
+
+esc :wq --write and quit
+chmod a+x cpu_count.sh
+./cpu_count.sh
+
+man mkdir
+mkdir wk1
+cd wk1
+ls
+ls -l
+ls -lF
+chmod a+x myfile.txt
+
+chmod -R 777 myfile.txt
+./ myfile.sh
+
+vi
+cd ..
+su -
+rootpasswd $ --> #
+Ctrl + d  # --> $
+
+env|grep -i proxy
+
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset https_proxy
+unset http_proxy
+
+yum sands for "Yellowdog Updater Modified"
+
+dnf install vim
+dnf -y install vim-enhanced
+
+vim
+esc
+:wq Enter
+
+
+bash if tests
+Operator	Description
+! EXPRESSION	The EXPRESSION is false.
+-n STRING	The length of STRING is greater than zero.
+-z STRING	The lengh of STRING is zero (ie it is empty).
+STRING1 = STRING2	STRING1 is equal to STRING2
+STRING1 != STRING2	STRING1 is not equal to STRING2
+INTEGER1 -eq INTEGER2	INTEGER1 is numerically equal to INTEGER2
+INTEGER1 -gt INTEGER2	INTEGER1 is numerically greater than INTEGER2
+INTEGER1 -lt INTEGER2	INTEGER1 is numerically less than INTEGER2
+-d FILE	FILE exists and is a directory.
+-e FILE	FILE exists.
+-r FILE	FILE exists and the read permission is granted.
+-s FILE	FILE exists and it's size is greater than zero (ie. it is not empty).
+-w FILE	FILE exists and the write permission is granted.
+-x FILE	FILE exists and the execute permission is granted.
+
