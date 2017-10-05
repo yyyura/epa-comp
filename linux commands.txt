@@ -1,3 +1,17 @@
+unset https_proxy
+unset http_proxy
+env|grep -i proxy
+
+git add .
+git commit -m "commit 2"
+git push
+
+
+
+
+
+
+
 #!/bin/bash
 cnt=`grep processor /proc/cpuinfo | wc -l`
 if [ $cnt -lt 5 ] ;then
@@ -6,9 +20,7 @@ fi
 
 
 #!/bin/bash
-
 # this is a CPU counting script
-
 cpu=grep -o 'processor' /proc/cpuinfo | wc -l
 if [ $cpu -lt 2 ]; then
   echo "Value too small".
@@ -17,6 +29,11 @@ fi
 
 
 git clone https://github.com/yyyura/epa-comp.git
+
+
+git config --global user.name "yyyura"
+git config --global user.email yyyura@gmail.com
+
 
 hello world
 privet mircat
