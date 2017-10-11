@@ -6,6 +6,7 @@ git add .
 git commit -m "commit test"
 git push
 
+
 ctrl shift n --new terminal
 ctrl o
 ctrl x
