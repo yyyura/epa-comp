@@ -7,6 +7,9 @@ git commit -m "commit test"
 git push
 
 ctrl shift n --new terminal
+ctrl o
+ctrl x
+ctrl d
 
 #!/bin/bash
 value=`grep processor /proc/cpuinfo | wc -l`
@@ -16,6 +19,81 @@ else
 echo "ok"
 fi
 
+Strings
+if [ -n "$var" ]; then
+  # Do something when var(string) is greater than zero. The length of STRING is greater than zero.
+fi
+
+if [ -z "$var" ]; then
+  # Do something when var(string) is zero (ie it is empty). The lengh of STRING is zero (ie it is empty).
+fi
+
+if [ ! "$var" ]; then
+  # Do something when The EXPRESSION is false.
+fi
+
+if [ "$string1" != "$string2" ] || [ "$string1" != "$string3" ]
+if [ "$string1" != "$string2" -o "$string1" != "$string3" ]
+if [[ "$string1" != "$string2" || "$string1" != "$string3" ]]
+
+Integers
+-eq numerically equal
+-gt numerically greater than
+-lt numerically less than
+
+Files
+#!/bin/bash
+FILE="$1"
+if [ -e ~/epa-comp/wk4/"$FILE" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+terminal$ ./script2.sh script.sh
+
+~ 	The value of $HOME
+~/foo   $HOME/foo
+if [ -e $HOME/epa-comp/wk4/"$FILE" ]; then
+
+-e 	FILE exists.
+-d 	FILE exists and is a directory.
+-s 	FILE exists and it's size is greater than zero (ie. it is not empty).
+
+-r 	FILE exists and the read permission is granted.
+-w 	FILE exists and the write permission is granted.
+-x 	FILE exists and the execute permission is granted.
+
+pwd, current working directory
+cd, 
+ls, 
+mkdir, 
+chmod, 
+mv, $ mv script2.sh script3.sh
+cp, 
+
+more, Displays text, one screen at a time.
+more +3 myfile.txt   Display the contents of file myfile.txt, beginning at line 3.
+more +/"hope" myfile.txt	Display the contents of file myfile.txt, beginning at the first line containing the string "hope".
+ls | more	List the contents of the current directory with ls, using more to display the list one screen at a time.
+more +/"then" script3.sh
+
+grep, Search for the given string in a single file
+grep "then" script3.sh
+grep "then" script*  	in multiple files
+grep -i "H" script3.sh   ----ignore-case
+
+wc, 
+rmdir, remove a full directory
+rm -r mydir    --to avoid Directory not empty
+
+rm, Delete (remove) a file or files.
+$HOME, home directory
+$USER,
+man grep  --help
+
+cat filename                          # Lists the file.
+cat file.1 file.2 file.3 > file.123   # Combines three files into one.
 
 
 
