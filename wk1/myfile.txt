@@ -1,26 +1,7 @@
-unset https_proxy
-unset http_proxy
-env|grep -i proxy
-
-git add .
-git commit -m "commit wk4"
-git push
-
-
-
-
-
-
-
 #!/bin/bash
-cnt=`grep processor /proc/cpuinfo | wc -l`
-if [ $cnt -lt 5 ] ;then
-echo "too few CPUs, exiting"
-fi
 
-
-#!/bin/bash
 # this is a CPU counting script
+
 cpu=grep -o 'processor' /proc/cpuinfo | wc -l
 if [ $cpu -lt 2 ]; then
   echo "Value too small".
@@ -29,11 +10,6 @@ fi
 
 
 git clone https://github.com/yyyura/epa-comp.git
-
-
-git config --global user.name "yyyura"
-git config --global user.email yyyura@gmail.com
-
 
 hello world
 privet mircat
@@ -121,8 +97,7 @@ dnf install vim
 dnf -y install vim-enhanced
 
 vim
-esc
-:wq Enter
+:q Enter
 
 
 bash if tests
