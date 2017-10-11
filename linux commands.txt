@@ -3,11 +3,18 @@ unset http_proxy
 env|grep -i proxy
 
 git add .
-git commit -m "commit wk4"
+git commit -m "commit test"
 git push
 
+ctrl shift n --new terminal
 
-
+#!/bin/bash
+value=`grep processor /proc/cpuinfo | wc -l`
+if [ $value -le $1 ]; then
+echo "not enought"
+else
+echo "ok"
+fi
 
 
 
