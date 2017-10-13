@@ -1,0 +1,41 @@
+q1
+ls usr/bin
+
+q2
+need to change read permision for directory 
+chmod a+r Downloads
+
+q3
+#!/bin/bash
+cnt=`grep processor /proc/cpuinfo | wc -l`
+if [ $cnt​ == $1​ ]; then
+echo "CPU​ ​ Configuration​ ​ correct"
+fi
+
+-eq is for numerical comparision
+
+
+
+q4
+ls | more | wc -l
+
+ls epa-comp | more | wc -l
+inside epa-comp dir
+
+q5
+#!/bin/bash
+dirA="/home/epa"
+dirB=`pwd`
+if [ "$dirA" != "$dirB" ]; then
+echo "wrong​ ​ directory,​ installation​ ​ cannot​ ​ proceed"
+fi
+
+
+-eq is for numerical comparision
+this variables are strings use == operator
+
+
+
+
+
+
