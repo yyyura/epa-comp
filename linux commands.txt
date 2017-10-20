@@ -4,7 +4,7 @@ env|grep -i proxy
 
 git pull
 git add .
-git commit -m "commit test"
+git commit -m "lab 6"
 git push
 
 
