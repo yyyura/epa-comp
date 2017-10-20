@@ -21,6 +21,13 @@ else
 echo "ok"
 fi
 
+value=`aws ec2 describe-instance-status --instance-ids $1 | grep running |  wc -l`
+if [ $value -lt 1 ]; then
+echo "no such instance running"
+else
+echo "the instance is running"
+fi
+
 Strings
 if [ -n "$var" ]; then
   # Do something when var(string) is greater than zero. The length of STRING is greater than zero.

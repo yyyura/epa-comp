@@ -1,1 +1,20 @@
+Install aws command line libraries:
 [epa@localhost ~]$ pip install awscli --upgrade --user
+
+Now check what version is installed:
+[epa@localhost ~]$ aws --version
+
+Credentials:
+[epa@localhost ~]$ aws configure
+AWS Access Key ID [None]: AKIAIZOHIQULM2OUTK6A
+AWS Secret Access Key [None]: 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
+Default region name [None]: eu-west-1
+Default output format [None]: json
+
+Configure the Env: 
+not needed on laptop
+
+EC2 Region Check:
+[epa@localhost ~]$ aws ec2 describe-regions --output table
+
+
