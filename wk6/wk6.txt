@@ -6,8 +6,8 @@ Now check what version is installed:
 
 Credentials:
 [epa@localhost ~]$ aws configure
-AWS Access Key ID [None]: AKIAIZOHIQULM2OUTK6A
-AWS Secret Access Key [None]: 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
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
 Default region name [None]: eu-west-1
 Default output format [None]: json
 
@@ -17,4 +17,47 @@ not needed on laptop
 EC2 Region Check:
 [epa@localhost ~]$ aws ec2 describe-regions --output table
 
+---
 
+rotate proxy
+Credentials
+download and install aws.tar
+double click
+.aws.tar
+extract to home directory
+
+
+Configure the Env
+ONLY for college 
+export AWS_CA_BUNDLE=$HOME/ironweb1.it-tallaght.ie.crt 
+
+unset https_proxy
+unset http_proxy
+env|grep -i proxy
+
+[epa@localhost ~]$ aws s3 ls
+2017-07-01 10:16:15 elasticbeanstalk-eu-west-1-057759806434
+2017-10-26 09:57:29 epa-lab-week7
+
+
+crontab -e
+* * * * * /home/epa/epa-comp/wk6/instance-check.sh
+
+*/10 * * * * /bin/execute/this/script.sh >> /var/log/script_output.log 2>&1
+
+~/epa-comp/wk6/instance-check.sh
+
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log 2>&1
+
+#aws ec2 describe-instance-status --instance-ids i-033390d4b2e4fb049
+#aws ec2 describe-instance-status --instance-ids i-07bc96b8192810fe0
+
+
+
+
+#if [ $value -le $1 ]; then
+#aws ec2 describe-instance-status --instance-ids i-033390d4b2e4fb049 | grep running |  wc -l
+
+crontab -e
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-07bc96b8192810fe0 >> /home/epa/epa-comp/wk6/script_output.log

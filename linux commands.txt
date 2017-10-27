@@ -1,3 +1,6 @@
+crontab -e
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log
+
 unset https_proxy
 unset http_proxy
 env|grep -i proxy
