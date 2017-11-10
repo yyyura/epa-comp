@@ -1,8 +1,10 @@
 #!/bin/bash
-echo "hi"
-~/epa-comp/wk8/loadtest $1
-bg loadWrapper.sh
-sleep 2
-echo "hi2"
-pkill loadWrapper.sh
-
+#./loadWrapper.sh 3 3
+#to run as background process use &
+~/epa-comp/wk8/loadtest $1 &
+echo "Load Test Runing..."
+pgrep loadtest
+sleep $2
+pkill loadtest
+echo "end of test"
+#pgrep loadtest
