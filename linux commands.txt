@@ -1,14 +1,60 @@
-crontab -e
-*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log
+git pull
+git add .
+git commit -m "lab 7"
+git push
 
 unset https_proxy
 unset http_proxy
 env|grep -i proxy
+vi .bashrc #is a shell script that Bash runs whenever it is started interactively. You can put any command in that file that you could type at the command prompt.
+-------------------
+wk8
+su -
+rootpasswd
+dnf install sysstat
+dnf install gcc-c++
 
-git pull
-git add .
-git commit -m "lab 6"
-git push
+#compile this file using the command
+g++ -fopenmp loadtest.C -o loadtest
+./loadtest 3
+#where N is the number of concurrent users from 0-100
+
+
+
+
+
+
+
+-----------------------
+
+#!/bin/bash
+value=`aws s3 ls s3://$1 |  wc -l`
+echo $value "files found in bucket"
+
+#aws s3 ls
+#epa-lab-week7
+
+aws s3 ls s3://epa-lab-week7 | wc -l
+
+
+aws s3 ls
+
+value=`aws ec2 describe-instance-status --instance-ids $1 | grep running |  wc -l`
+
+crontab -e
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log
+
+export EDITOR=vi ;to specify a editor to open crontab file.
+crontab -e    Edit crontab file, or create one if it doesn’t already exist.
+crontab -l    crontab list of cronjobs , display crontab file contents.
+crontab -r    Remove your crontab file.
+crontab -v    Display the last time you edited your crontab file. (This option is only available on a few systems.)
+
+
+
+
+
+
 
 
 ctrl shift n --new terminal
@@ -30,6 +76,9 @@ echo "no such instance running"
 else
 echo "the instance is running"
 fi
+
+
+
 
 Strings
 if [ -n "$var" ]; then
