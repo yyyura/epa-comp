@@ -58,6 +58,27 @@ crontab -e
 #if [ $value -le $1 ]; then
 #aws ec2 describe-instance-status --instance-ids i-033390d4b2e4fb049 | grep running |  wc -l
 
+
+**Bonus Question
+Place your script into a cron job. 
+Have the script run every minute and check BOTH ids above, 
+and if either is not available, the script writes a message to a logfile
+
 crontab -e
-*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log
-*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-07bc96b8192810fe0 >> /home/epa/epa-comp/wk6/script_output.log
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log 2>&1
+*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-07bc96b8192810fe0 >> /home/epa/epa-comp/wk6/script_output.log 2>&1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

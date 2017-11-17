@@ -1,6 +1,6 @@
 git pull
 git add .
-git commit -m "lab 7"
+git commit -m "lab 8"
 git push
 
 unset https_proxy
@@ -8,6 +8,31 @@ unset http_proxy
 env|grep -i proxy
 vi .bashrc #is a shell script that Bash runs whenever it is started interactively. You can put any command in that file that you could type at the command prompt.
 -------------------
+wk8
+
+#!/bin/bash
+#./loadWrapperLoop.sh 300 3
+for (( i = 0 ; i <= $1; i+=20 ))
+do
+./loadtest $i &
+echo "Load of $i users"
+sleep $2
+cat /proc/loadavg >> mylogfile
+pkill loadtest
+done
+
+--------------------------
+#!/bin/bash
+#./loadWrapper.sh 3 3
+#to run as background process use &
+~/epa-comp/wk8/loadtest $1 &
+echo "Load Test Runing..."
+pgrep loadtest
+sleep $2
+pkill loadtest
+echo "end of test"
+#pgrep loadtest
+---------------------------
 wk8
 su -
 rootpasswd
@@ -19,11 +44,16 @@ g++ -fopenmp loadtest.C -o loadtest
 ./loadtest 3
 #where N is the number of concurrent users from 0-100
 
-
-
-
-
-
+#!/bin/bash
+#./loadWrapper.sh 3 3
+#to run as background process use &
+~/epa-comp/wk8/loadtest $1 &
+echo "Load Test Runing..."
+pgrep loadtest
+sleep $2
+pkill loadtest
+echo "end of test"
+#pgrep loadtest
 
 -----------------------
 
