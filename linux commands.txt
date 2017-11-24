@@ -1,6 +1,6 @@
 git pull
 git add .
-git commit -m "lab 9"
+git commit -m "lab 10"
 git push
 
 unset https_proxy
