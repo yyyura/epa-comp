@@ -1,6 +1,6 @@
 git pull
 git add .
-git commit -m "lab 8"
+git commit -m "lab 9"
 git push
 
 unset https_proxy
@@ -8,6 +8,30 @@ unset http_proxy
 env|grep -i proxy
 vi .bashrc #is a shell script that Bash runs whenever it is started interactively. You can put any command in that file that you could type at the command prompt.
 -------------------
+wk9
+
+
+
+[epa@localhost wk9]$ mpstat -o JSON | jq '.sysstat.hosts[0].machine'
+"x86_64"
+[epa@localhost wk9]$ mpstat -o JSON | jq '.sysstat.hosts[0].statistics[0].timestamp'
+"10:22:57"
+
+[epa@localhost wk9]$ mpstat -o JSON | jq '.sysstat.hosts[0].statistics[0]."cpu-load"[0].idle'
+86.44
+
+[epa@localhost wk9]$ mpstat 10 1 -o JSON | jq '.sysstat.hosts[0].statistics[0]."cpu-load"[0].idle'
+96.18
+
+[epa@localhost wk9]$ mpstat 10 1 -o JSON | jq '100 - .sysstat.hosts[0].statistics[0]."cpu-load"[0].idle'
+3.010000000000005
+
+[epa@localhost wk10]$  echo "`date` this goes to a file appending it" >> file.txt
+
+[epa@localhost wk10]$ cnt=9
+[epa@localhost wk10]$  echo "`date` $cnt files open" >> file.txt
+
+------------------------
 wk8
 
 #!/bin/bash
