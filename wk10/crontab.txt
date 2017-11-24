@@ -1,0 +1,6 @@
+crontab -e
+
+*/1 * * * * /home/epa/epa-comp/wk10/tmpCnt.sh
+
+
+crontab -r       To delete the entire Crontab

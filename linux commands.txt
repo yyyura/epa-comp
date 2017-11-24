@@ -12,6 +12,20 @@ vi .bashrc #is a shell script that Bash runs whenever it is started interactivel
 -------------------
 wk10
 
+#!/bin/bash
+cnt=`ls /tmp | wc -l`
+maxnum=3
+if [ $cnt -ge $maxnum ]; then
+	echo "`date` Maximum numbers of files ($cnt) exceeded the parameter ($maxnum) in (/tmp) directory" >> /home/epa/epa-comp/wk10/log.txt
+fi
+--
+crontab -e
+
+*/1 * * * * /home/epa/epa-comp/wk10/tmpCnt.sh
+
+crontab -r       To delete the entire Crontab
+
+
 echo "`date` this goes to a file appending it" >> file.txt
 
 cnt=9
@@ -84,6 +98,13 @@ echo "end of test"
 #pgrep loadtest
 
 -----------------------
+wk6
+
+#crontab -e
+#*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-033390d4b2e4fb049 >> /home/epa/epa-comp/wk6/script_output.log 2>&1
+#*/1 * * * * /home/epa/epa-comp/wk6/instance-check.sh i-07bc96b8192810fe0 >> /home/epa/epa-comp/wk6/script_output.log 2>&1
+
+--------------------------------
 
 #!/bin/bash
 value=`aws s3 ls s3://$1 |  wc -l`
