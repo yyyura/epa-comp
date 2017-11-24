@@ -12,10 +12,10 @@ vi .bashrc #is a shell script that Bash runs whenever it is started interactivel
 -------------------
 wk10
 
-[epa@localhost wk10]$  echo "`date` this goes to a file appending it" >> file.txt
+echo "`date` this goes to a file appending it" >> file.txt
 
-[epa@localhost wk10]$ cnt=9
-[epa@localhost wk10]$  echo "`date` $cnt files open" >> file.txt
+cnt=9
+echo "`date` $cnt files open" >> file.txt
 
 
 -------------------
