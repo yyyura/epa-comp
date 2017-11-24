@@ -7,10 +7,19 @@ unset https_proxy
 unset http_proxy
 env|grep -i proxy
 vi .bashrc #is a shell script that Bash runs whenever it is started interactively. You can put any command in that file that you could type at the command prompt.
+
+
+-------------------
+wk10
+
+[epa@localhost wk10]$  echo "`date` this goes to a file appending it" >> file.txt
+
+[epa@localhost wk10]$ cnt=9
+[epa@localhost wk10]$  echo "`date` $cnt files open" >> file.txt
+
+
 -------------------
 wk9
-
-
 
 [epa@localhost wk9]$ mpstat -o JSON | jq '.sysstat.hosts[0].machine'
 "x86_64"
@@ -25,11 +34,6 @@ wk9
 
 [epa@localhost wk9]$ mpstat 10 1 -o JSON | jq '100 - .sysstat.hosts[0].statistics[0]."cpu-load"[0].idle'
 3.010000000000005
-
-[epa@localhost wk10]$  echo "`date` this goes to a file appending it" >> file.txt
-
-[epa@localhost wk10]$ cnt=9
-[epa@localhost wk10]$  echo "`date` $cnt files open" >> file.txt
 
 ------------------------
 wk8
