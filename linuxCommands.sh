@@ -10,6 +10,18 @@ vi .bashrc #is a shell script that Bash runs whenever it is started interactivel
 
 
 -------------------
+wk12
+
+docker build -t firstcontainer .
+docker images
+
+RUN pip install -r requirements.txt
+
+
+
+
+
+-------------------
 wk10
 
 #!/bin/bash

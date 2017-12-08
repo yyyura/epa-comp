@@ -1,0 +1,19 @@
+[epa@localhost ~]$ env|grep -i proxy
+[epa@localhost ~]$ unset https_proxy
+[epa@localhost ~]$ unset http_proxy
+[epa@localhost ~]$ env|grep -i proxy
+[epa@localhost ~]$ ls
+ca2x00116645  Downloads                    Music     Templates
+Desktop       epa-comp                     Pictures  Videos
+Documents     ironweb1.it-tallaght.ie.crt  Public
+[epa@localhost ~]$ cd epa-lab/wk12
+bash: cd: epa-lab/wk12: No such file or directory
+[epa@localhost ~]$ cd epa-comp/wk12
+[epa@localhost wk12]$ ls
+app.py  Dockerfile  index.html  requirements.txt
+[epa@localhost wk12]$ docker build -t firstcontainer .
+Sending build context to Docker daemon  115.7kB
+Step 1/6 : FROM python:2.7-slim
+Get https://registry-1.docker.io/v2/: proxyconnect tcp: dial tcp: lookup ironweb1.it-tallaght.ie on 89.101.160.4:53: no such host
+[epa@localhost wk12]$ 
+
